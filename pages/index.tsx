@@ -4,6 +4,7 @@ import { Box, Center, Spacer, Stack } from "@chakra-ui/react"
 import type { NextPage } from "next"
 import styles from '../styles/Home.module.css'
 import NavBar from "../components/NavBar"
+import Disconnected from '../components/Disconnected'
 
 const Home: NextPage = () => {
 
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
           <Spacer />
           <Center>
 						{ /* If connected, the second view, otherwise the first */ }
+            {!connected && <Disconnected />}
                 </Center>
           <Spacer />
 
