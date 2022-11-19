@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Box, Center, Spacer, Stack } from "@chakra-ui/react"
 import type { NextPage } from "next"
 import styles from '../styles/Home.module.css'
+import NavBar from "../components/NavBar"
 
 const Home: NextPage = () => {
 
@@ -17,11 +18,12 @@ const Home: NextPage = () => {
       <Box
         w="full"
         h="calc(100vh)"
-        bgImage={"url(/home-background.svg)"}
+        bgImage={connected ? "" : "url(/home-background.svg)"}
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
 					{ /* NavBar */ }
+          <NavBar />
 
           <Spacer />
           <Center>
