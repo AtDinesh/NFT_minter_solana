@@ -5,8 +5,10 @@ import type { NextPage } from "next"
 import styles from '../styles/Home.module.css'
 import NavBar from "../components/NavBar"
 import Disconnected from '../components/Disconnected'
+import { useWallet } from "@solana/wallet-adapter-react"
 
 const Home: NextPage = () => {
+  const { connected } = useWallet()
 
   return (
     <div className={styles.container}>
